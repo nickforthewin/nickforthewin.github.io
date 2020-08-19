@@ -14,6 +14,11 @@
     --secondaryText: #4b5156;
 }
 
+::selection {
+    background: #aaeef0;
+    color: #000;
+}
+
 body {
     font-family: 'Roboto Mono';
 }
