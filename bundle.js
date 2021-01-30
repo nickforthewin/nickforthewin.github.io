@@ -5752,7 +5752,7 @@
     	return child_ctx;
     }
 
-    // (141:28) {#each project.topics as topic}
+    // (143:28) {#each project.topics as topic}
     function create_each_block_1(ctx) {
     	let li;
     	let t_value = /*topic*/ ctx[12] + "";
@@ -5774,7 +5774,7 @@
     	};
     }
 
-    // (132:16) {#each projects as project}
+    // (134:16) {#each projects as project}
     function create_each_block(ctx) {
     	let div2;
     	let div0;
@@ -6083,9 +6083,11 @@
     	}
 
     	function getSavedTheme() {
-    		if (localStorage.getItem("theme") == "light") {
+    		if (localStorage.getItem("theme") == null) {
+    			updateTheme("dark");
+    		} else if (localStorage.getItem("theme") == "light") {
     			updateTheme("light");
-    		} else if (localStorage.getItem("theme") == null || localStorage.getItem("theme") == "dark") {
+    		} else if (localStorage.getItem("theme") == "dark") {
     			updateTheme("dark");
     		}
     	}
